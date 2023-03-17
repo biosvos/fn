@@ -26,7 +26,7 @@ func Reduce[IN any, OUT any](slice []IN, init OUT, f func(OUT, IN) OUT) OUT {
 	return ret
 }
 
-func For[T any](slice []T, f func(T)) {
+func Each[T any](slice []T, f func(T)) {
 	for _, item := range slice {
 		f(item)
 	}
